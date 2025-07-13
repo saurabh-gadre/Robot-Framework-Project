@@ -1,0 +1,5 @@
+*** Test Cases ***;${userName};${password}
+Invalid UserName and Valid Password;fake_user_name;admin123
+Invalid Password and Valid UserName;admin;fake_password
+Invalid UserName and Invalid Password;fake_user_name;fake_password
+Special Characters for userName and Password;@!#%$^&*()_+;@!#%$^&*()_+
