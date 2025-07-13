@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Test cases for verifying order functionality of available products on DemoBlaze
-Resource   tests/demoblaze_tests/resources.robot
+Resource   ./resources.robot
 Library    SeleniumLibrary
 Library    Collections
 Suite Setup    Set Screenshot Directory    tests/demoblaze_tests/screenshots

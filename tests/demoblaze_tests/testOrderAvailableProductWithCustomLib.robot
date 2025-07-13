@@ -1,13 +1,13 @@
 *** Settings ***
 Documentation    Test cases for verifying order functionality of available products on DemoBlaze
-Resource   tests/demoblaze_tests/resources.robot
+Resource   ./resources.robot
 Library    SeleniumLibrary
 Library    Collections
-Library    customLibraries/Shop.py
+Library    ../../customLibraries/Shop.py
 Suite Setup    Set Screenshot Directory    tests/demoblaze_tests/screenshots
 
 *** Variables ***
-@{PRODUCT_NAME}    MacBook Pro
+${PRODUCT_NAME}    MacBook Pro
 
 *** Test Cases ***
 Validate Order of Available Product
@@ -20,7 +20,7 @@ Validate Order of Available Product
     Scroll Element Into View         xpath://a[text()='Laptops']
     Click Element                    xpath://a[text()='Laptops']
     Sleep    3s
-    Select Item To Add To Cart       @{PRODUCT_NAME}
+    Select Item To Add To Cart       ${PRODUCT_NAME}
     Add Product to Cart for Order
     Place Product Order for Product Added to Cart   ${PRODUCT_NAME}
     

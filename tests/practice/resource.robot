@@ -13,10 +13,11 @@ ${valid_password}         admin123
 
 *** Keywords ***
 User launches the browser and navigates to the login page
-    Open Browser    ${URL}    Chrome
+    [Arguments]    ${browser}=Chrome
+    Open Browser    ${URL}    ${browser}
     Set Browser Implicit Wait    10s
     Maximize Browser Window
-
+    
 Wait for the Element to be visible on the page
     [Arguments]    ${element}    ${timeout}=5s
     Wait Until Element Is Visible     ${element}    ${timeout}

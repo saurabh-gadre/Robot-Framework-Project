@@ -3,6 +3,7 @@ Documentation    Test case to verify login functionality of OrangeHRM applicatio
 Resource          resource.robot
 Resource          ../../PO/OrangeHRMLoginPage.robot
 Library           DataDriver    file=resources/data.csv    encoding=UTF-8
+Test Template     Validate Unsuccessful Login for OrangeHRM Application
 Test Teardown     Close Browser
 
 *** Variables ***
